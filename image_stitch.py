@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 import argparse
 
-def stitching(file1, file2, file_stitched, gray_scale = False):
+def stitch(file1, file2, file_stitched, gray_scale = False):
     if gray_scale:
         img1 = cv2.imread(file1, cv2.IMREAD_GRAYSCALE)
         img2 = cv2.imread(file2, cv2.IMREAD_GRAYSCALE)
@@ -70,5 +70,4 @@ if '__main__' == __name__:
     parser.add_argument("file_merged",help = "output")
     parser.add_argument("-g","--gray_scale", action = "store_true", help = "if given, the output will be grayscale image")
     args = parser.parse_args()
-    print(args.gray_scale)
-    stitching(args.file1, args.file2,args.file_merged, args.gray_scale)
+    stitch(args.file1, args.file2,args.file_merged, args.gray_scale)

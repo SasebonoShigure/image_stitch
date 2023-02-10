@@ -4,8 +4,8 @@
 ## 实现
   - 使用```SIFT```对两张图提取特征点，用```BFMatcher```的```KNN```算法寻找匹配，使用```Lowe's```算法筛选匹配点，依据匹配计算出变换矩阵，对第二张图做透视变换并使用```np.putmask```做简单的图像拼接。
 ## 示例
-- 原始图像<br />![source.jpg](/images/source.jpg)<br />从原始图像中截取的两部分，其中一张图进行了一定的旋转<br />
-![1.jpg](/images/1.jpg)
-![2.jpg](/images/2.jpg)
+- 原始图像<br /><img src="images/source.jpg" width = 30% /><br />从原始图像中截取的两部分，其中一张图进行了一定的旋转<br />
+<img src="images/1.jpg" width = 30% />
+<img src="images/2.jpg" width = 30% />
 <br />拼接后的输出结果：<br />
-![output.jpg](/images/output.jpg)
+<img src="images/output.jpg" width = 30% />
